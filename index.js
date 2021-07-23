@@ -61,7 +61,6 @@ const zooAnimals = [
   */
 
   function animalNames(zooAnimal) {
-    /*Your Code Here*/
     let displayNames = [];
     zooAnimal.forEach((animal, index) => {
       displayNames[
@@ -79,10 +78,10 @@ const zooAnimals = [
   */
 
   function lowerCaseNames(zooAnimal){
-    const LowerNames = zooAnimal.map(function(item){
-         return item.animal_name.toLowerCase();
-      });
-      return LowerNames
+    const LowerNames = zooAnimal.map(item =>
+          item.animal_name.toLowerCase()
+      );
+      return LowerNames;
   }
     
   
@@ -92,10 +91,13 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function lowPopulationAnimals(zooAnimal){
+    const finals = zooAnimal.filter(item => item.population > 5
+    ); 
+    return finals
+   }
   
+   console.log(finals)
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -139,7 +141,7 @@ function multiply(here, that){
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
 function greeting(first, last){
-   return `Hello ${first} ${last}, nice to meet you!`
+   return `Hello ${first} ${last}, nice to meet you!`;
   }
   
   
